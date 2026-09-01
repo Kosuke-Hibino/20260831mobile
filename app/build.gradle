@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation libs.preference
     coreLibraryDesugaring libs.desuger.jdk.libs
     implementation libs.activity.ktx
     implementation libs.appcompat
@@ -44,4 +45,7 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.espresso.core
     androidTestImplementation libs.ext.junit
+    implementation libs.datastore.preferences
+    implementation libs.datastore.preferences.rxjava3
+
 }
