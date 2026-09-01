@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         prefDataStore = PrefDataStore.getInstance(this);
+        prefDataStore.getString("name").ifPresent(name -> binding.textView.setText(name));
         binding.button2.setOnClickListener(view -> {
             var text = binding.editTextText.getText().toString();
             prefDataStore.setString("name",text);
