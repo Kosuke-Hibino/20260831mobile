@@ -28,8 +28,23 @@ public class MainActivity3 extends AppCompatActivity {
             return insets;
         });
 
+        //intent
         Intent intent = getIntent();
         String sentText = intent.getStringExtra("editText");
         binding.textViewResult.setText(sentText);
+
+        //OK
+        binding.buttonOK.setOnClickListener(view -> {
+            var ok_intent = new Intent();
+            ok_intent.putExtra("ret","OK");
+            setResult(RESULT_OK, ok_intent);
+            finish();
+        });
+
+        //Cansel
+        binding.buttonCancel.setOnClickListener(view -> {
+            setResult(RESULT_CANCELED);
+            finish();
+        });
     }
 }
