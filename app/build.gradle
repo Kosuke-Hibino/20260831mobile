@@ -45,6 +45,9 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.espresso.core
     androidTestImplementation libs.ext.junit
+
+    implementation libs.okhttp
+    implementation libs.moshi
     implementation libs.datastore.preferences
     implementation libs.datastore.preferences.rxjava3
 
