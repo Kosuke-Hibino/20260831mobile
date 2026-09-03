@@ -36,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation libs.preference
     coreLibraryDesugaring libs.desuger.jdk.libs
     implementation libs.activity.ktx
     implementation libs.appcompat
@@ -47,5 +48,7 @@ dependencies {
 
     implementation libs.okhttp
     implementation libs.moshi
+    implementation libs.datastore.preferences
+    implementation libs.datastore.preferences.rxjava3
 
 }
